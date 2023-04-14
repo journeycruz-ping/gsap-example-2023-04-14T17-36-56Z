@@ -1,9 +1,0 @@
-options:
-  srcDir: src/dist
-  buildDir: target
-  jcrPath: /content/dam/wayfinder
-defines:
-  artifactId: pic-npm-starter
-  description: Landing page starter with frontend libraries from webdev-aem-sites
-  groupId: com.pingidentity.my_packages
-  version: '1.0'
