@@ -1,0 +1,26 @@
+@use '../../variables/variables' as *;
+
+/*
+Classnames
+*/
+
+$megadisplay-102: megadisplay--102;
+$megadisplay-101: megadisplay--101;
+
+/*
+Config
+*/
+
+@mixin font-megadisplay($selector, $font-size, $line-height) {
+  .#{$selector} {
+    @include font-condensed-extrabold;
+
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
+
+.#{$pds-wrapper} {
+  @include font-megadisplay($megadisplay-102, $pri-d8-line-height, $pri-d8-line-height);
+  @include font-megadisplay($megadisplay-101, $pri-d6-line-height, $pri-d6-line-height);
+}

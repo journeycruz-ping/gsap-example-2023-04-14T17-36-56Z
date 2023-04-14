@@ -1,0 +1,32 @@
+/*
+ * Grid breakpoints
+ */
+
+$grid-breakpoint-xs: 0 !default;
+$grid-breakpoint-sm: 320px !default;
+$grid-breakpoint-md: 768px !default;
+$grid-breakpoint-lg: 1024px !default;
+$grid-breakpoint-xl: 1200px !default;
+$grid-breakpoint-xxl: 1440px !default;
+$grid-xs-min: $grid-breakpoint-xs;
+$grid-xs-max: calc(#{$grid-breakpoint-sm} - 1px);
+$grid-sm-min: $grid-breakpoint-sm;
+$grid-sm-max: calc(#{$grid-breakpoint-md} - 1px);
+$grid-md-min: $grid-breakpoint-md;
+$grid-md-max: calc(#{$grid-breakpoint-lg} - 1px);
+$grid-lg-min: $grid-breakpoint-lg;
+$grid-lg-max: calc(#{$grid-breakpoint-xl} - 1px);
+$grid-xl-min: $grid-breakpoint-xl;
+$grid-xl-max: calc(#{$grid-breakpoint-xxl} - 1px);
+$grid-xxl-min: $grid-breakpoint-xxl;
+
+/*
+ * Grid gutters
+ */
+
+$grid-gutter-xs: 0 !default;
+$grid-gutter-sm: 0 !default;
+$grid-gutter-md: 16px !default;
+$grid-gutter-lg: 32px !default;
+$grid-gutter-xl: 32px !default;
+$grid-gutter-xxl: 32px !default;

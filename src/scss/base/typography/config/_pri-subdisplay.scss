@@ -1,0 +1,30 @@
+@use '../../variables/variables' as *;
+
+/*
+Classnames
+*/
+
+$subdisplay-104: subdisplay--104;
+$subdisplay-103: subdisplay--103;
+$subdisplay-102: subdisplay--102;
+$subdisplay-101: subdisplay--101;
+
+/*
+Config
+*/
+
+@mixin font-subdisplay($selector, $font-size, $line-height) {
+  .#{$selector} {
+    @include font-medium;
+
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
+
+.#{$pds-wrapper} {
+  @include font-subdisplay($subdisplay-104, $d6-font-size, $d7-line-height);
+  @include font-subdisplay($subdisplay-103, $d5-font-size, $d6-line-height);
+  @include font-subdisplay($subdisplay-102, $d4-font-size, $d5-line-height);
+  @include font-subdisplay($subdisplay-101, $d3-font-size, $d4-line-height);
+}

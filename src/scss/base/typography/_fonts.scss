@@ -1,0 +1,257 @@
+@use '../../variables/layout/grid' as *;
+
+/*
+ * Gotham
+ */
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('https://download.pingidentity.com/public/fonts-gotham/woff2/Gotham-Light_Web.woff2') format('woff2'),
+    url('https://download.pingidentity.com/public/fonts-gotham/woff/Gotham-Light_Web.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('https://download.pingidentity.com/public/fonts-gotham/woff2/Gotham-Book_Web.woff2') format('woff2'),
+    url('https://download.pingidentity.com/public/fonts-gotham/woff/Gotham-Book_Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('https://download.pingidentity.com/public/fonts-gotham/woff2/Gotham-Medium_Web.woff2') format('woff2'),
+    url('https://download.pingidentity.com/public/fonts-gotham/woff/Gotham-Medium_Web.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('https://download.pingidentity.com/public/fonts-gotham/woff2/Gotham-Bold_Web.woff2') format('woff2'),
+    url('https://download.pingidentity.com/public/fonts-gotham/woff/Gotham-Bold_Web.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('https://download.pingidentity.com/public/fonts-gotham/woff2/Gotham-Black_Web.woff2') format('woff2'),
+    url('https://download.pingidentity.com/public/fonts-gotham/woff/Gotham-Black_Web.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Cond';
+  src:
+    url('https://download.pingidentity.com/public/fonts-gotham/woff2/GothamCond-Black_Web.woff2') format('woff2'),
+    url('https://download.pingidentity.com/public/fonts-gotham/woff/GothamCond-Black_Web.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Cond';
+  src:
+    url('https://download.pingidentity.com/public/fonts-gotham/woff2/GothamCond-XBlack_Web.woff2') format('woff2'),
+    url('https://download.pingidentity.com/public/fonts-gotham/woff/GothamCond-XBlack_Web.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Narrow';
+  src:
+    url('https://download.pingidentity.com/public/fonts-gotham/woff2/GothamNarrow-Black_Web.woff2') format('woff2'),
+    url('https://download.pingidentity.com/public/fonts-gotham/woff/GothamNarrow-Black_Web.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/*
+ * Gotham
+ */
+$font-gotham: 'Gotham', helvetica, sans-serif !default;
+$font-gotham-condensed: 'Gotham Cond', helvetica, sans-serif !default;
+$font-gotham-narrow: 'Gotham Narrow', helvetica, sans-serif !default;
+
+/*
+  * Monospace
+  */
+$font-monospace: 'Courier New', monospace !default;
+
+@mixin font-monospace-regular() {
+  font-family: $font-monospace;
+  font-weight: 400;
+}
+
+/*
+  * Base Font Definitions
+  */
+$font-family-base: $font-gotham !default;
+
+// Font-size
+
+$font-size-base: 1rem !default;
+$pri-font-size-base: 2rem !default;
+
+@media (max-width: $grid-md-max) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: $grid-lg-min) and (max-width: $grid-lg-max) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: $grid-xl-min) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@function font-size-display($scaleFactor) {
+  @return calc(#{$font-size-base} + (4px * #{$scaleFactor}));
+}
+@function font-size-body($scaleFactor) {
+  @return calc(#{$font-size-base} + (4px * #{$scaleFactor}));
+}
+
+$d1-font-size: font-size-display(0);
+$d2-font-size: font-size-display(1);
+$d3-font-size: font-size-display(2);
+$d4-font-size: font-size-display(3);
+$d5-font-size: font-size-display(4);
+$d6-font-size: font-size-display(5);
+$d7-font-size: font-size-display(6);
+$d8-font-size: font-size-display(7);
+$d9-font-size: font-size-display(8);
+$d10-font-size: font-size-display(9);
+$d11-font-size: font-size-display(10);
+
+$b0-font-size: calc(#{$font-size-base} - 4px);
+$b1-font-size: calc(#{$font-size-base} - 2px);
+$b2-font-size: font-size-body(0);
+$b3-font-size: font-size-body(1);
+$b4-font-size: font-size-body(2);
+
+$f1-font-size: calc(#{$font-size-base} - 4px);
+
+@function pri-font-size-display($scaleFactor) {
+  @return calc(#{$pri-font-size-base} + (4px * #{$scaleFactor}));
+}
+@function pri-font-size-body($scaleFactor) {
+  @return calc(#{$pri-font-size-base} + (4px * #{$scaleFactor}));
+}
+
+$pri-d1-font-size: pri-font-size-display(0);
+$pri-d2-font-size: pri-font-size-display(1);
+$pri-d3-font-size: pri-font-size-display(2);
+$pri-d4-font-size: pri-font-size-display(3);
+$pri-d5-font-size: pri-font-size-display(4);
+$pri-d6-font-size: pri-font-size-display(5);
+$pri-d7-font-size: pri-font-size-display(6);
+$pri-d8-font-size: pri-font-size-display(7);
+$pri-d11-font-size: pri-font-size-display(12);
+
+$pri-b1-font-size: calc(#{$pri-font-size-base} - 2px);
+$pri-b2-font-size: pri-font-size-body(0);
+$pri-b3-font-size: pri-font-size-body(1);
+$pri-b4-font-size: pri-font-size-body(2);
+
+$pri-f1-font-size: calc(#{$pri-font-size-base} - 4px);
+
+// Line-height
+// - calculated in relation to corresponding typography class font-sizes
+
+@function line-height-display($fontSize) {
+  @return calc(#{$fontSize} + 4px);
+}
+@function line-height-body($fontSize) {
+  @return calc(#{$fontSize} + 8px);
+}
+@function line-height-fine($fontSize) {
+  @return calc(#{$fontSize} + 6px);
+}
+
+$d1-line-height: line-height-display($d1-font-size);
+$d2-line-height: line-height-display($d2-font-size);
+$d3-line-height: line-height-display($d3-font-size);
+$d4-line-height: line-height-display($d4-font-size);
+$d5-line-height: line-height-display($d5-font-size);
+$d6-line-height: line-height-display($d6-font-size);
+$d7-line-height: line-height-display($d7-font-size);
+$d8-line-height: line-height-display($d8-font-size);
+$d9-line-height: line-height-display($d9-font-size);
+$d10-line-height: line-height-display($d10-font-size);
+$d11-line-height: line-height-display($d11-font-size);
+
+$b0-line-height: line-height-body($b0-font-size);
+$b1-line-height: line-height-body($b1-font-size);
+$b2-line-height: line-height-body($b2-font-size);
+$b3-line-height: line-height-body($b3-font-size);
+$b4-line-height: line-height-body($b4-font-size);
+
+$f1-line-height: line-height-fine($f1-font-size);
+
+@function pri-line-height-display($fontSize) {
+  @return calc(#{$fontSize} + 4px);
+}
+@function pri-line-height-body($fontSize) {
+  @return calc(#{$fontSize} + 8px);
+}
+@function pri-line-height-fine($fontSize) {
+  @return calc(#{$fontSize} + 6px);
+}
+
+$pri-d1-line-height: pri-line-height-display($pri-d1-font-size);
+$pri-d2-line-height: pri-line-height-display($pri-d2-font-size);
+$pri-d3-line-height: pri-line-height-display($pri-d3-font-size);
+$pri-d4-line-height: pri-line-height-display($pri-d4-font-size);
+$pri-d5-line-height: pri-line-height-display($pri-d5-font-size);
+$pri-d6-line-height: pri-line-height-display($pri-d6-font-size);
+$pri-d7-line-height: pri-line-height-display($pri-d7-font-size);
+$pri-d8-line-height: pri-line-height-display($pri-d8-font-size);
+$pri-d11-line-height: pri-line-height-display($pri-d11-font-size);
+
+$pri-b1-line-height: pri-line-height-body($pri-b1-font-size);
+$pri-b2-line-height: pri-line-height-body($pri-b2-font-size);
+$pri-b3-line-height: pri-line-height-body($pri-b3-font-size);
+$pri-b4-line-height: pri-line-height-body($pri-b4-font-size);
+
+$pri-f1-line-height: line-height-fine($pri-f1-font-size);
+
+@mixin font-light() {
+  font-family: $font-family-base;
+  font-weight: 300;
+}
+@mixin font-regular() {
+  font-family: $font-family-base;
+  font-weight: 400;
+}
+@mixin font-medium() {
+  font-family: $font-family-base;
+  font-weight: 500;
+}
+@mixin font-bold() {
+  font-family: $font-family-base;
+  font-weight: 700;
+}
+@mixin font-extrabold() {
+  font-family: $font-family-base;
+  font-weight: 800;
+}
+@mixin font-condensed-bold() {
+  font-family: $font-gotham-condensed;
+  font-weight: 700;
+}
+@mixin font-condensed-extrabold() {
+  font-family: $font-gotham-condensed;
+  font-weight: 800;
+}
+@mixin font-narrow-extrabold() {
+  font-family: $font-gotham-narrow;
+  font-weight: 800;
+}
