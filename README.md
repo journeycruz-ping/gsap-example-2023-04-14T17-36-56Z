@@ -1,6 +1,6 @@
-# Ping Design System Starter Kit
+# GreenSock Animation Platform - DrawSVG with ScrollTrigger example and starter source code
 
-This is an NPM starter kit for getting started with Ping Design System. It provides the necessary files and dependencies for building projects with Ping Design System. The kit includes the following dependencies:
+This is an NPM starter kit for getting started with GSAP ScrollTrigger and DrawSVG plugins. It provides the necessary files and dependencies for building projects with Ping Design System. The kit includes the following dependencies:
 
 - Bootstrap 5
 - LottiePlayer
